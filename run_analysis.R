@@ -70,6 +70,5 @@ run_analysis<-function()
         finalData <- dcast(meltedData, Subject + Activity ~ variable, mean)
         # Save the final data set
         write.table(finalData, file="./tidy_data.txt", row.names = FALSE)
-        message("Debug")
 }
 
