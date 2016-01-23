@@ -31,8 +31,8 @@ prepareData <- function(mFileList)
         trainSubject <- read.table(mFileList$trainSubject, stringsAsFactors = FALSE, header = FALSE, col.names = "Subject")
         
         # Get only mean and std columns
-        relevantColumns <- grep("mean|std", variablesMap$variableName)
-        #relevantColumns <- grep("mean[:(:][:):]|std", variablesMap$variableName)
+        #relevantColumns <- grep("mean|std", variablesMap$variableName)
+        relevantColumns <- grep("mean[:(:][:):]|std", variablesMap$variableName)
         # Combine data with activities and subject
         readyTrain <- cbind(trainData[relevantColumns], trainActivities, trainSubject)
         readyTest <- cbind(testData[relevantColumns], testActivities, testSubject)
