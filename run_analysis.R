@@ -1,4 +1,4 @@
-getRawData<-function()
+getRawData <- function()
 {
         mFileName <- "getdata-projectfiles-UCI HAR Dataset.zip"
         # Download the raw data if not exist yet
