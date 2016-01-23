@@ -3,10 +3,14 @@
 ## Getting and cleaning data week 4 assignment
 
 This repo contains a single script called "run_analysis.R" to perform the required analysis.
-Script has three functions: \
-getRawData <- function()\
-prepareData <- function(mFileList)\
-run_analysis<-function()\
+Script has three functions: 
+
+getRawData <- function() 
+
+prepareData <- function(mFileList) 
+
+run_analysis<-function() 
+
 First two functions are used by "run_analysis" function
 
 # getRawData function
@@ -22,6 +26,7 @@ NOTE: as discussed at Coursera forums, columns having meanFreq and others of suc
 Finally it sets the activity names based on their id.
 
 # run_analysis
-Does all the job :)\
+Does all the job :) 
+
 At first it calls "getRawData", then "prepareData". Then data is melted by activity and subject and casted on their sum using mean.
 Obtained table is a required by assignment tidy data set.
