@@ -25,7 +25,7 @@ Set the appropriate column names for original data sets
 Merge training and test sets  
 Add subjects id and activity names to the obtained set  
 Substitute only columns which contain mean() or std() in their names  
-## NOTE: as discussed at Coursera forums, columns having meanFreq and others of such type are excluded
+### NOTE: as discussed at Coursera forums, columns having meanFreq and others of such type are excluded
 Set the activity names based on their id  
 Melt data by activity and subject  
 Cast data on activity + subject using mean  
