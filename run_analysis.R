@@ -22,11 +22,11 @@ prepareData <- function(mFileList)
         # Get variables map
         variablesMap <- read.table(mFileList$variablesName, stringsAsFactors = FALSE, header = FALSE, col.names = c("columnID","variableName"))
         # Get "test" set with proper names 
-        testData <- read.table(mFileList$testData, stringsAsFactors = FALSE, header = FALSE, col.names = variablesMap$variableName)
+        testData <- read.table(mFileList$testData, stringsAsFactors = FALSE, header = FALSE, col.names = gsub("[\\(),-]", "", variablesMap$variableName))
         testActivities <- read.table(mFileList$testActivities, stringsAsFactors = FALSE, header = FALSE, col.names = "Activity")
         testSubject <- read.table(mFileList$testSubject, stringsAsFactors = FALSE, header = FALSE, col.names = "Subject")
         # Get "train" set with proper names 
-        trainData <- read.table(mFileList$trainData, stringsAsFactors = FALSE, header = FALSE, col.names = variablesMap$variableName)
+        trainData <- read.table(mFileList$trainData, stringsAsFactors = FALSE, header = FALSE, col.names = gsub("[\\(),-]", "", variablesMap$variableName))
         trainActivities <- read.table(mFileList$trainActivities, stringsAsFactors = FALSE, header = FALSE, col.names = "Activity")
         trainSubject <- read.table(mFileList$trainSubject, stringsAsFactors = FALSE, header = FALSE, col.names = "Subject")
         
