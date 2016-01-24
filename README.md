@@ -30,3 +30,7 @@ Does all the job :)
 
 At first it calls "getRawData", then "prepareData". Then data is melted by activity and subject and casted on their sum using mean.
 Obtained table is a required by assignment tidy data set.
+
+
+# Running the script
+In order to get the tidy data set download the "run_analysis.R" script. Source it in RStudio and execute run_analysis.
